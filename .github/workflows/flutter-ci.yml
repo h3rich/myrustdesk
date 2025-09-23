@@ -19,6 +19,11 @@ on:
 
 jobs:
   run-ci:
+    permissions:
+      contents: write 
+      packages: read
+      issues: read
+    
     uses: ./.github/workflows/flutter-build.yml
     with:
       upload-artifact: true
